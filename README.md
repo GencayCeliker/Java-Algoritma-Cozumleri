@@ -47,11 +47,11 @@ Bu projeyi kendi bilgisayarınızda incelemek ve çalıştırmak için:
 
 1.  **Projeyi bilgisayarınıza indirin:**
     ```bash
-    git clone [https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ.git](https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ.git)
+    git clone https://github.com/GencayCeliker/Java-Algoritma-Cozumleri.git
     ```
 2.  **İlgili dizine gidin:**
     ```bash
-    cd REPO_ADINIZ
+    cd Java-Algoritma-Cozumleri
     ```
 3.  **Bir soruyu derleyin ve çalıştırın:**
     Örneğin 2. Seviye'nin 1. sorusunu çalıştırmak için terminal veya CMD ekranında şu komutları kullanabilirsiniz:

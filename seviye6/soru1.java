@@ -8,7 +8,7 @@ public class soru1 {
     public static void main(String[] args) {
         /* Programın bulunduğu klasördeki herhangi bir “metin belgesi”nin içeriğini 
 ekrana yazdıran programı yazınız */
-        File dos = new File("c:\\Users\\Gencay\\Desktop\\odevjava\\seviye6");
+        File dos = new File(".") /* programın çalıştırıldığı klasör */;
         File[] listOfFiles = dos.listFiles((dir, name) -> name.toLowerCase().endsWith(".txt"));
         File file = null;
         if (listOfFiles != null && listOfFiles.length > 0) {

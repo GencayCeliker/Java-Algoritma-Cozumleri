@@ -15,7 +15,7 @@ yazdırınız. */
                 System.out.println(i + ". Sayıyı Giriniz: ");
                 int b = a.nextInt();
                 // sayilar.txt dosyasına sayıyı ekleyin
-                File file = new File("c:\\Users\\Gencay\\Desktop\\odevjava\\seviye6\\sayilar.txt");
+                File file = new File("sayilar.txt");
                 try (FileWriter ekle = new FileWriter(file, true)) {
                     ekle.write(b + "\n");
                 } catch (IOException e) {

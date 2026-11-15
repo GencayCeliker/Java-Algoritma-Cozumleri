@@ -12,7 +12,7 @@ public class soru5{
         String ogrc;
         int vize;
         int fin;
-        File file = new File("c:\\Users\\Gencay\\Desktop\\odevjava\\seviye6\\ogrenci.txt");
+        File file = new File("ogrenci.txt");
         for ( int i=1;i<=20;i++) {
             System.out.print("Öğrencinin Adı: ");
             ogrc=sc.nextLine();

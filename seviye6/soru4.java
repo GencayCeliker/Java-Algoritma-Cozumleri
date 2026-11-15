@@ -5,7 +5,7 @@ public class soru4 {
         /*Programın bulunduğu klasördeki herhangi bir “metin belgesi” içersinde, 
 şayet belge içersinde “merhaba” kelimesi geçiyorsa kaçıncı satırlarda bu 
 kelimenin geçtiğini ekrana yazdırınız*/
-        String dosyaAdi = "C:\\Users\\Gencay\\Desktop\\odevjava\\seviye6\\Yeni Metin Belgesi.txt";
+        String dosyaAdi = "Yeni Metin Belgesi.txt";
         String arananKelime = "merhaba";
         
         try (BufferedReader oku = new BufferedReader(new FileReader(dosyaAdi))) {

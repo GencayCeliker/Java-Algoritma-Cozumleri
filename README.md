@@ -2,72 +2,91 @@
 
 ![Java](https://img.shields.io/badge/Language-Java-orange) ![Status](https://img.shields.io/badge/Status-Completed-green) ![Education](https://img.shields.io/badge/Focus-Algorithms-blue)
 
-Bu depo (repository), üniversitede **Bilgisayar Programcılığı** dersi kapsamında **İmdat Köksal** hocamız tarafından verilen kapsamlı algoritma projesinin Java dili ile geliştirilmiş çözümlerini içermektedir.
+Bu depo, üniversitede **Bilgisayar Programcılığı** dersi kapsamında **İmdat Köksal** hocamız tarafından verilen kapsamlı algoritma ödevinin ([`GENEL_ÖDEV.pdf`](GENEL_%C3%96DEV.pdf)) Java ile yazılmış çözümlerini içerir.
 
-Proje; temel programlama mantığından başlayarak dosya işlemleri, matrisler ve ileri seviye algoritma kurma becerilerini geliştirmeyi hedefleyen 7 farklı seviyeden oluşmaktadır.
-
----
-
-## 🎯 Proje Hakkında
-
-Bu çalışma, problem çözme odaklı bir yaklaşımla hazırlanmış olup, Java dilinin temel ve orta düzey yeteneklerini kapsamaktadır. Grafiksel arayüz (GUI) yerine, **algoritma mantığını kavramaya yönelik konsol tabanlı uygulamalar** geliştirilmiştir.
-
-### 🚀 Kazanımlar ve İçerik
-Bu proje sürecinde aşağıdaki konularda uygulama geliştirilerek yetkinlik sağlanmıştır:
-
-* **Temel Yapılar:** Değişkenler, koşul blokları (if-else, switch) ve operatörler.
-* **Döngüler ve Matematik:** `for`, `while` döngüleri ile karmaşık matematiksel hesaplamalar ve seriler.
-* **String Manipülasyonu:** Metin parçalama, birleştirme, arama ve karakter dizisi analizleri.
-* **Veri Yapıları & Matrisler:** Çok boyutlu diziler (arrays) üzerinde gezinti ve matris işlemleri.
-* **Dosya İşlemleri (I/O):** `.txt` dosyalarına veri yazma, veri okuma ve loglama mekanizmaları.
-* **Oyun Mantığı:** Kullanıcı etkileşimi içeren basit oyun algoritmaları ve senaryoları.
-* **Rastgelelik:** `Random` sınıfı ile dinamik veri üretimi ve simülasyonlar.
+Ödev; temel programlama mantığından başlayıp matrisler, klavye etkileşimi, dosya işlemleri ve mantık sorularına uzanan **7 seviyeden** oluşur. Toplam **63 Java dosyası** vardır ve hepsi JDK 17+ ile hatasız derlenir.
 
 ---
 
-## 📂 Klasör Yapısı ve Çözümler
+## 🎯 Kazanımlar
 
-Proje, zorluk derecesine göre seviyelere ayrılmış klasörlerden oluşmaktadır. Her klasör içerisinde ilgili seviyenin sorularına ait Java sınıfları (`Soru1.java`, `Soru2.java` vb.) bulunmaktadır.
+* **Temel yapılar:** Değişkenler, `if-else`, `switch`, operatörler
+* **Döngüler ve matematik:** `for` / `while` ile seriler, faktöriyel, asal sayılar, basamak işlemleri
+* **String işlemleri:** Karakter sayma, ters çevirme, arama, ASCII dönüşümleri
+* **Matrisler:** 3x3 matris toplama, transpoz, satır/sütun toplamları
+* **Klavye ve ekran (Swing):** `JFrame` + `KeyListener` ile tuş yakalama, daktilo, koordinata yazı yazma, labirent oyunu
+* **Dosya işlemleri (I/O):** `.txt` dosyasına yazma, sonuna ekleme, okuma, kelime arama; `RandomAccessFile`
+* **Rastgelelik:** `Random` ile sayı üretimi ve oyun senaryoları
 
-| Klasör | Seviye | Açıklama |
-| :--- | :--- | :--- |
-| 📁 `Seviye1` | **Başlangıç** | Temel giriş-çıkış işlemleri, basit mantıksal sorgular. |
-| 📁 `Seviye2` | **Döngüler** | Matematiksel algoritmalar, faktöriyel, asal sayı vb. hesaplamalar. |
-| 📁 `Seviye3` | **String İşlemler** | Kelime/cümle analizleri, ASCII tablo, metin şifreleme mantığı. |
-| 📁 `Seviye4` | **Matrisler** | 2D/3D dizi işlemleri, tablo oluşturma ve veri saklama. |
-| 📁 `Seviye5` | **Klavye/Ekran** | Kullanıcı etkileşimli, yön tuşları simülasyonlu basit konsol uygulamaları. |
-| 📁 `Seviye6` | **Dosya İşlemleri** | Verilerin dosyaya kaydedilmesi ve dosyadan okunması. |
-| 📁 `Seviye7` | **İleri Seviye** | Karmaşık mantık soruları ve proje bazlı algoritmalar. |
+---
+
+## 📂 Klasör Yapısı
+
+| Klasör | Paket | Konu | Dosyalar |
+| :--- | :--- | :--- | :--- |
+| 📁 `Seviye1` | *(paket yok)* | Temel giriş-çıkış, en küçük/en büyük, renkli konsol yazısı | `soru1–4`, `renkliyaz` |
+| 📁 `Seviye2` | `Seviye2` | Döngüler ve matematiksel algoritmalar | `soru1–15`, `soruasal` |
+| 📁 `seviye3` | `seviye3` | String işlemleri | `soru1–17`, `soru17_1` |
+| 📁 `seviye4` | `seviye4` | Matrisler ve sınıf listesi | `soru1–5` |
+| 📁 `seviye5` | `seviye5` | Klavye/ekran uygulamaları – **Swing penceresi açar** | `soru1–5` |
+| 📁 `seviye6` | `seviye6` | Dosya işlemleri | `soru1–5`, `datoku` |
+| 📁 `seviye7` | `seviye7` | Mantık ve sayı problemleri | `soru1–3`, `soru6–9`, `Soru10` |
+
+> Dosya adları küçük harfle başlar (`soru1.java`); yalnızca `seviye7/Soru10.java` büyük harfle başlar. Java büyük/küçük harfe duyarlıdır, komutları aşağıdaki gibi yazın.
 
 ---
 
 ## 🛠️ Kurulum ve Çalıştırma
 
-Bu projeyi kendi bilgisayarınızda incelemek ve çalıştırmak için:
+### Gereksinimler
 
-1.  **Projeyi bilgisayarınıza indirin:**
-    ```bash
-    git clone https://github.com/GencayCeliker/Java-Algoritma-Cozumleri.git
-    ```
-2.  **İlgili dizine gidin:**
-    ```bash
-    cd Java-Algoritma-Cozumleri
-    ```
-3.  **Bir soruyu derleyin ve çalıştırın:**
-    Örneğin 2. Seviye'nin 1. sorusunu çalıştırmak için terminal veya CMD ekranında şu komutları kullanabilirsiniz:
-    ```bash
-    javac Seviye2/Soru1.java
-    java Seviye2.Soru1
-    ```
-    *(Not: Alternatif olarak IntelliJ VSCODE veya Eclipse gibi bir IDE ile klasörü açıp direkt çalıştırabilirsiniz.)*
+* **JDK 17** veya üzeri (`java -version` ile kontrol edin)
+* İsteğe bağlı: IntelliJ IDEA, Eclipse veya VS Code (*Extension Pack for Java*)
+
+### 1. Projeyi indirin
+
+```bash
+git clone https://github.com/GencayCeliker/Java-Algoritma-Cozumleri.git
+cd Java-Algoritma-Cozumleri
+```
+
+### 2. Bir soruyu derleyip çalıştırın
+
+Komutları **depo kök klasöründe** çalıştırın. Türkçe karakterler için `-encoding UTF-8` kullanın.
+
+**Paketli seviyeler (Seviye2 – seviye7):**
+
+```bash
+javac -encoding UTF-8 -d out Seviye2/soru1.java
+java -cp out Seviye2.soru1
+```
+
+```bash
+javac -encoding UTF-8 -d out seviye7/Soru10.java
+java -cp out seviye7.Soru10
+```
+
+**Seviye1 (paketsiz):**
+
+```bash
+javac -encoding UTF-8 -d out Seviye1/soru1.java
+java -cp out soru1
+```
+
+### 3. Notlar
+
+* **seviye5** soruları konsol değil, küçük bir **Swing penceresi** açar. Tuşlara basmadan önce pencereye tıklayıp odağı verin.
+* **seviye6** soruları dosyaları **programı çalıştırdığınız klasörde** oluşturur ve okur (`sayilar.txt`, `ogrenci.txt`, `Yeni Metin Belgesi.txt`, `records.dat`). `soru1` ve `soru4` için önce o klasöre bir `.txt` dosyası koyun.
+* Windows konsolunda Türkçe karakterler bozuk görünürse önce `chcp 65001` çalıştırın.
+* IDE ile çalıştırmak için klasörü açıp ilgili dosyada **Run**'a basmanız yeterlidir.
 
 ---
 
 ## 📝 Lisans ve Referans
 
-* **Orijinal Sorular:** İmdat Köksal (Bilgisayar Mühendisi) tarafından hazırlanmıştır.
-* **Çözümler:** [Gencay Çeliker] tarafından Java dili ile kodlanmıştır.
-* Bu proje eğitim amaçlıdır ve açık kaynak olarak paylaşılmıştır.
+* **Orijinal sorular:** İmdat Köksal (Bilgisayar Mühendisi) – [`GENEL_ÖDEV.pdf`](GENEL_%C3%96DEV.pdf)
+* **Çözümler:** Gencay Çeliker
+* Eğitim amaçlıdır ve [MIT](LICENSE) lisansı ile açık kaynak olarak paylaşılmıştır.
 
 ---
 ⭐ *Bu projeyi faydalı bulduysanız sağ üst köşeden yıldız vermeyi unutmayın!*

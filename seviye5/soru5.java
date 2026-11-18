@@ -30,35 +30,40 @@ bırakılmıştır.
     public soru5() {
         setTitle("Labirent Oyunu");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(600, 300);
 
-        // Labirent oluştur
+        // Labirent oluştur: her öğe yalnızca boş bir hücreye yerleşir, böylece
+        // oyuncu, çıkış ve yemler üst üste binip kaybolmaz (oyunda tam 20 yem olur)
         Random r = new Random();
-        oyuncu[0] = r.nextInt(15);
-        oyuncu[1] = r.nextInt(30);
+        int[] p = bosHucre(r);
+        oyuncu[0] = p[0];
+        oyuncu[1] = p[1];
         labirent[oyuncu[0]][oyuncu[1]] = 'o';
 
         // Çıkış ekle
-        labirent[r.nextInt(15)][r.nextInt(30)] = 'c';
+        yerlestir(r, 'c', 1);
 
         // Yem, engel ve mayınları ekle
-        for (int i = 0; i < 20; i++)
-            labirent[r.nextInt(15)][r.nextInt(30)] = '.';
-        for (int i = 0; i < 80; i++)
-            labirent[r.nextInt(15)][r.nextInt(30)] = 'x';
-        for (int i = 0; i < 30; i++)
-            labirent[r.nextInt(15)][r.nextInt(30)] = 'm';
+        yerlestir(r, '.', 20);
+        yerlestir(r, 'x', 80);
+        yerlestir(r, 'm', 30);
 
-        add(new JPanel() {
+        JPanel panel = new JPanel() {
             @Override
             public void paintComponent(Graphics g) {
                 super.paintComponent(g);
+                g.setFont(new Font(Font.MONOSPACED, Font.BOLD, 15));
+                // drawString yazının taban çizgisini kullanır: ilk satırın görünmesi için +15
                 for (int i = 0; i < 15; i++)
                     for (int j = 0; j < 30; j++)
-                        g.drawString(labirent[i][j] + "", j * 20, i * 20);
-                g.drawString("Puan: " + puan + " Yem: " + yemSayisi + "/20", 10, 290);
+                        if (labirent[i][j] != '\0')
+                            g.drawString(labirent[i][j] + "", j * 20 + 5, i * 20 + 15);
+                g.drawString("Puan: " + puan + "  Yem: " + yemSayisi + "/20", 10, 15 * 20 + 22);
             }
-        });
+        };
+        panel.setPreferredSize(new Dimension(30 * 20, 15 * 20 + 32));
+        add(panel);
+        pack();
+        setLocationRelativeTo(null);
 
         addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
@@ -109,6 +114,24 @@ bırakılmıştır.
         });
 
         setVisible(true);
+    }
+
+    // Rastgele bir boş hücre bulur
+    private int[] bosHucre(Random r) {
+        int i, j;
+        do {
+            i = r.nextInt(15);
+            j = r.nextInt(30);
+        } while (labirent[i][j] != '\0');
+        return new int[] { i, j };
+    }
+
+    // Verilen karakteri adet kadar boş hücreye yerleştirir
+    private void yerlestir(Random r, char c, int adet) {
+        for (int k = 0; k < adet; k++) {
+            int[] h = bosHucre(r);
+            labirent[h[0]][h[1]] = c;
+        }
     }
 
     public static void main(String[] args) {

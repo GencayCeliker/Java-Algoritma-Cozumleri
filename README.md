@@ -8,6 +8,19 @@ Bu depo, üniversitede **Bilgisayar Programcılığı** dersi kapsamında **İmd
 
 ---
 
+## 🎬 Demo
+
+![labirent](docs/labirent.gif)
+
+**seviye5/soru5 – Labirent oyunu:** oyuncu (`o`) yön tuşlarıyla mayınlara (`m`) ve engellere (`x`) basmadan 20 yemi (`.`) topluyor ve çıkışa (`c`) ulaşıyor.
+
+![daktilo](docs/daktilo.gif)
+
+**seviye5/soru2 – Daktilo:** basılan her karakter yan yana yazılıyor, Enter alt satıra geçiyor.
+
+> Görüntüler, depodaki kurulum script'iyle kurulan örnek veritabanı üzerinde uygulama çalıştırılarak alınmıştır.
+
+
 ## 🎯 Kazanımlar
 
 * **Temel yapılar:** Değişkenler, `if-else`, `switch`, operatörler
